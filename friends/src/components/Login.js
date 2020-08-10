@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 
 const LoginForm = (props) => {
-  console.log("props.history", props.history);
-
+  
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
