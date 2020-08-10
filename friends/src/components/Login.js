@@ -25,5 +25,28 @@ const LoginForm = (props) => {
         })
         .catch(error => console.log({error: error.message}))
   }
-  
+
+  return (
+    <form onSubmit={handleSubmit} className="form">
+      <label>
+        Username
+          <input
+            name="username"
+            value={credentials.username}
+            onChange={handleChange}
+          />
+      </label>
+      <label>
+        Password
+          <input
+            name="password"
+            value={credentials.password}
+            onChange={handleChange}
+          />
+      </label>
+      <button>Log In</button>
+    </form>
+  )
 }
+
+export default LoginForm;
